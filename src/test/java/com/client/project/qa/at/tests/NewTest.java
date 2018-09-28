@@ -21,6 +21,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.client.project.qa.at.common.ConfigReader;
 import com.client.project.qa.at.common.DataFactory;
@@ -40,7 +41,8 @@ public class NewTest {
 	ExtentReports eReport;
 
 	LoginPage loginPage;
-
+	SoftAssert as = new SoftAssert();
+	
 	@BeforeMethod(alwaysRun = true)
 	public void beforeMethod() throws IOException {
 		System.out.println("Before Method");
